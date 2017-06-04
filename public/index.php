@@ -1,10 +1,11 @@
 <?php
-use Phalcon\Di\FactoryDefault;
+use Phalcon\Di\FactoryDefault;         
 
 error_reporting(E_ALL);
 
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
+
 
 try {
 
@@ -17,6 +18,10 @@ try {
     /**
      * Handle routes
      */
+
+    $app = new Phalcon\Mvc\Micro();
+
+    // Define the routes here
     include APP_PATH . '/config/router.php';
 
     /**

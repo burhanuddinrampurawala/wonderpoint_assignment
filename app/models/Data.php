@@ -1,5 +1,4 @@
 <?php
-
 use Phalcon\Validation;
 use Phalcon\Validation\Validator\Email as EmailValidator;
 use Phalcon\Validation\Validator\Uniqueness as UniquenessValidator;
@@ -115,6 +114,11 @@ class Data extends \Phalcon\Mvc\Model
     public static function findFirst($parameters = null)
     {
         return parent::findFirst($parameters);
+    }
+    // get all the data stored in the table
+    public function getData()
+    {
+        return parent::find();
     }
 
 }

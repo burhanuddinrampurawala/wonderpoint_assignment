@@ -1,0 +1,14 @@
+<div class="post">
+	<table class="table table-hover" id="list" style="margin-left: 25px;font-size: 20px; margin-top: 25px" >
+	    <?php
+	    //adding the data into the table
+		 $txt="<tr style=' background-color: #f1f1f1;'><th>First name</th><th>Last name</th><th>Email</th><th>Gender</th><th>Education</th><th>Skills</th></tr>";
+	    	foreach ($users as $user) {
+	        $txt .="<tr><td>".$user->firstname."</td><td>".$user->lastname."</td><td>".$user->email."</td><td>".$user->gender."</td><td>".$user->education."</td><td>".$user->skills."</td</tr>";
+	    }
+	    echo $txt;
+
+		?>
+   </table>
+
+</div>
